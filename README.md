@@ -1,6 +1,6 @@
-# DA Form Generator
+# PDF DA Form Generator
 
-Generates fillable DA Forms via [ReportLab](https://www.reportlab.com/). Fields for documents like the 
+Generates fillable PDF DA Forms via [ReportLab](https://www.reportlab.com/). Fields for documents like the 
 [DA Form 2404](./docs/DA2404_Sample.pdf) may be easily filled by providing the corresponding fields names to the 
 corresponding [Da2404 Class](da_forms/models.py) model.
 
