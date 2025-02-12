@@ -11,7 +11,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, PageBreak
 
-from forms.models import Da2404, Da2404LineItem
+from da_forms.models import Da2404, Da2404LineItem
 
 logger = logging.getLogger(__name__)
 
