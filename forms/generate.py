@@ -1,5 +1,6 @@
 import logging
 import math
+import os.path
 from io import BytesIO
 
 from reportlab.lib import colors
@@ -10,7 +11,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, PageBreak
 
-from da2404.models import Da2404, Da2404LineItem
+from forms.models import Da2404, Da2404LineItem
 
 logger = logging.getLogger(__name__)
 
@@ -784,6 +785,9 @@ def create_da_2404(da_2404: Da2404) -> BytesIO:
 
 
 def write_to_file(output_path: str = 'dist/DA2404.pdf'):
+    if not os.path.exists(os.path.dirname(output_path)):
+        os.makedirs(os.path.dirname(output_path))
+
     da_fields = Da2404()
     buffer = create_da_2404(da_fields)
     with open(output_path, 'wb+') as file:

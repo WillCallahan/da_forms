@@ -1,9 +1,9 @@
 [project]
-name = "da2404"
-version = "0.1.0"
-description = "DA Form 2404 Generation via ReportLab"
+name = "forms"
+version = "1.0.0"
+description = "DA Forms Generation via ReportLab"
 authors = [
-    {name = "WillCallahan",email = "willcallahan94@att.net"}
+    { name = "William Callahan" }
 ]
 readme = "README.md"
 requires-python = ">=3.13,<4"
@@ -20,4 +20,4 @@ build-backend = "poetry.core.masonry.api"
 pytest = "^8.3.4"
 
 [tool.poetry.scripts]
-generate = "da2404.generate:write_to_file"
+generate = "forms.generate:write_to_file"
